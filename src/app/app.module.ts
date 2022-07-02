@@ -9,7 +9,7 @@ import { CustomThemeModule } from './components/custom-theme/custom-theme.module
 import { NavigationModule } from './components/navigation/navigation.module';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [

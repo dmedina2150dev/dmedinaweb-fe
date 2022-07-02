@@ -88,26 +88,22 @@
                   background-color: var(--color-grey-4);
                   margin-left: 1rem;
                   position: relative;
-                  span {
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      background-color: var(--color-secondary);
-                      transition: all .4s ease-in-out;
-                      width: 60%;
-                  }
-                  .html { width: 80%; }
-                  .css { width: 95%; }
-                  .js { width: 75%; }
-                  .react{ width: 60%; }
-                  .node{ width: 87%; }
-                  .python{ width: 70%; }
+                  appearance: none;
+                  -webkit-appearance: none;
+                  margin-right: 1rem;
               }
           }
       }
   }
 }
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--color-grey-4);
+}
+progress[value]::-webkit-progress-value {
+  background-color: var(--color-secondary);
+}
+
 .stat-title {
   text-transform: uppercase;
   font-size: 1.4rem;

@@ -1,17 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { Skill } from '../../models/skill';
+import {
+  Firestore, addDoc, collection, collectionData,
+  doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc
+} from '@angular/fire/firestore';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
+  private ref: any;
 
+  constructor(private firestore: Firestore){
 
-  constructor(private http: HttpClient){}
+  }
 
-  getSkill() {
-      return of(true)
+  getSkill(): Observable<Skill[]> {
+    this.ref = collection(this.firestore, 'skills');
+    return collectionData<Skill>(this.ref);
   }
 }
