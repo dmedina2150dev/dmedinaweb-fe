@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +15,7 @@ import { NavigationModule } from './components/navigation/navigation.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
 
     NavigationModule,
     CustomThemeModule

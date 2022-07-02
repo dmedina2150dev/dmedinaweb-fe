@@ -1,0 +1,16 @@
+{
+  "skills": [
+    { "title": "html5", "percent": 80 },
+    { "title": "css3", "percent": 90 },
+    { "title": "Javascript", "percent": 70 },
+    { "title": "NodeJs", "percent": 60 },
+    { "title": "Angular", "percent": 85 },
+    { "title": "React", "percent": 35 },
+    { "title": "Vue", "percent": 25 },
+    { "title": "Java", "percent": 45 },
+    { "title": "Spring Boot", "percent": 50 },
+    { "title": "Docker", "percent": 60 },
+    { "title": "Jenkins", "percent": 30 },
+    { "title": "GCP", "percent": 35 }
+  ]
+}
