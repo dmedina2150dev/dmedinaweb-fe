@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dmedinaweb-fe';
+  setMode: boolean = false;
+
+  receiveMode(event: boolean) {
+    this.setMode = event;
+  }
 }
