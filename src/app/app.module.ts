@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { CustomThemeModule } from './components/custom-theme/custom-theme.module';
 import { NavigationModule } from './components/navigation/navigation.module';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { NavigationModule } from './components/navigation/navigation.module';
     HttpClientModule,
 
     NavigationModule,
-    CustomThemeModule
+    CustomThemeModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
